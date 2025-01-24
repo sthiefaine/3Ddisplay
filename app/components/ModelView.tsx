@@ -5,11 +5,11 @@ import { Model3D } from '@/app/components/Model3D';
 
 export const ModelView = () => {
   return (
-      <Canvas camera={{ position: [4, 2, 2], fov: 50 }}>
+      <Canvas camera={{ position: [2, 2, -0.5], fov: 60 }}>
         <ambientLight intensity={2} />
         <directionalLight position={[1, 1, 0]} intensity={1} />
         <Model3D />
-        <OrbitControls minDistance={1} maxDistance={5} />
+        <OrbitControls minDistance={5} maxDistance={5} enablePan={false} />
       </Canvas>
   );
 }

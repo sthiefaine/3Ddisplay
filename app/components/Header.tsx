@@ -13,7 +13,7 @@ export const Header = () => {
       }}
     >
       <h1 style={{ margin: 0, fontSize: "1.5rem", color: "#333" }}>
-        3D 🎉
+        Éléments 3D
       </h1>
     </header>
   );
