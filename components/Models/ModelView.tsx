@@ -7,7 +7,9 @@ import { useModelStore } from "@/store/model";
 import { Model3D } from "./Model3D";
 
 export const ModelView = () => {
-  const { modelSelected } = useModelStore();
+  const modelSelected = useModelStore(
+    (state) => state.modelSelected,
+  );
 
   const controlsRef = useRef<any>(null);
 

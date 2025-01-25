@@ -3,6 +3,11 @@ export interface ModelsData {
   url: string;
 }
 
+const modelTest: ModelsData = {
+  name: "test",
+  url: "test.glb",
+};
+
 export const modelsDataList: ModelsData[] = [
   {
     name: "croissant",
@@ -11,5 +16,13 @@ export const modelsDataList: ModelsData[] = [
   {
     name: "baguette",
     url: "baguette.glb",
-  }
+  },
+  {
+    name: "gruyere",
+    url: "gruyere.glb",
+  },
+  {
+    name: "ara",
+    url: "ara.glb",
+  },
 ];

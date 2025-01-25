@@ -45,7 +45,6 @@ export const Model3D = () => {
 
   useLayoutEffect(() => {
     if (ref.current) {
-      console.log('model', modelSelected);
       ref.current.rotation.set(0, 0, 0);
       ref.current.position.set(0, 0, 0);
       ref.current.scale.set(1, 1, 1);
@@ -58,6 +57,8 @@ export const Model3D = () => {
       ref.current.rotation.y += 0.006;
     }
   });
+
+
 
   return <primitive object={scene} ref={ref} />;
 };
