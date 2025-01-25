@@ -5,7 +5,7 @@ export interface ModelsData {
 
 export const modelsDataList: ModelsData[] = [
   {
-    name: "Croissant",
+    name: "croissant",
     url: "croissant.glb",
   },
   {
