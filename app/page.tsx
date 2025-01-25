@@ -1,7 +1,7 @@
 
-import { Header } from "./components/Header";
-import { ModelView } from "./components/ModelView";
-import { Options } from "./components/Options";
+import { Header } from "./components/Header/Header";
+import { ModelView } from "./components/Models/ModelView";
+import { Options } from "./components/Models/Options";
 
 
 export default function Home() {

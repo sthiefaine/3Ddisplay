@@ -1,7 +1,7 @@
 "use client";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Model3D } from '@/app/components/Model3D';
+import { Model3D } from '@/app/components/Models/Model3D';
 
 export const ModelView = () => {
   return (
