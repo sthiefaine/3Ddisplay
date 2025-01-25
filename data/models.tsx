@@ -25,4 +25,8 @@ export const modelsDataList: ModelsData[] = [
     name: "ara",
     url: "ara.glb",
   },
+  {
+    name : "coq",
+    url: "coq.glb",
+  }
 ];
