@@ -7,8 +7,8 @@ import { useRef } from "react";
 import * as THREE from "three";
 
 export const Model3D = () => {
-  const { spin } = useModelStore();
-  const { scene } = useGLTF("./croissant.glb");
+  const { spin, modelSelected } = useModelStore();
+  const { scene } = useGLTF(`./${modelSelected}.glb`);
 
   const ref = useRef<THREE.Object3D>(null);
 

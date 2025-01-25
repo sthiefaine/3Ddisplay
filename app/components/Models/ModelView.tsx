@@ -9,7 +9,7 @@ export const ModelView = () => {
         <ambientLight intensity={2} />
         <directionalLight position={[1, 1, 0]} intensity={1} />
         <Model3D />
-        <OrbitControls minDistance={5} maxDistance={5} enablePan={false} />
+        <OrbitControls minDistance={3} maxDistance={4.5} enablePan={false} />
       </Canvas>
   );
 }
