@@ -8,12 +8,36 @@ import * as THREE from "three";
 import { useShallow } from "zustand/shallow";
 
 export const Model3D = () => {
-  const { spin, modelSelected } = useModelStore(
+  const { spin, modelSelected, modelsList } = useModelStore(
     useShallow((state) => ({
       spin: state.spin,
       modelSelected: state.modelSelected,
+      modelsList: state.modelsList,
     }))
   );
+
+
+  useEffect(() => {
+    const currentModelIndex =
+      modelsList.findIndex(
+        (model) => model.name.toLowerCase() === modelSelected.name.toLowerCase()
+      ) || 0;
+
+    // Précharger le modèle suivant
+    if (currentModelIndex < modelsList.length - 1) {
+      useGLTF.preload(`./${modelsList[currentModelIndex + 1].url}`);
+    } else {
+      useGLTF.preload(`./${modelsList[0].url}`);
+    }
+
+    // Précharger le modèle précédent
+    if (currentModelIndex > 0) {
+      useGLTF.preload(`./${modelsList[currentModelIndex - 1].url}`);
+    } else {
+      useGLTF.preload(`./${modelsList[modelsList.length - 1].url}`);
+    }
+  }, [modelSelected, modelsList]);
+
 
   const { scene } = useGLTF(`./${modelSelected?.url}`);
 
