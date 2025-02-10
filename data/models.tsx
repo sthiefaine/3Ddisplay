@@ -10,6 +10,10 @@ const modelTest: ModelsData = {
 
 export const modelsDataList: ModelsData[] = [
   {
+    name: "ananas",
+    url: "ananas.glb"
+  },
+  {
     name: "croissant",
     url: "croissant.glb",
   },
@@ -28,5 +32,13 @@ export const modelsDataList: ModelsData[] = [
   {
     name : "coq",
     url: "coq.glb",
-  }
+  },
+  {
+    name: "monstera",
+    url: "monstera.glb"
+  },
+  {
+    name: "monstera 2",
+    url: "monstera2.glb"
+  },
 ];
